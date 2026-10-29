@@ -28,7 +28,7 @@ See [verification](VERIFICATION.md) for tested distributions and limitations.
 
 ## Install and launch
 
-Clone the repository using an account with access, or use your existing local checkout:
+Clone the repository, or use your existing local checkout:
 
 ```bash
 git clone https://github.com/OSINTCabal/MinimaxDeck.git
