@@ -8,7 +8,9 @@ A MiniMax Code desktop integration for **Fedora and Debian Linux (x86-64)**. Kee
 
 [Install](docs/INSTALL.md) · [Development](docs/DEVELOPMENT.md) · [Verification](docs/VERIFICATION.md)
 
-![MinimaxDeck startup on Fedora Linux](docs/screenshots/fedora-sign-in.png)
+![MinimaxDeck dashboard preview](docs/screenshots/dashboard.png)
+
+Dashboard preview from a signed-in session. The capture excludes the account area, personal task history, and survey popup. MiniMax requires sign-in to open this workspace.
 
 ## Features
 
@@ -81,16 +83,6 @@ Use a disposable installation with `MINIMAX_CODE_ROOT`, `XDG_BIN_HOME`, `XDG_DAT
 - Browser sign-in remains an upstream MiniMax feature. Changing a user-agent does not guarantee that every identity provider will accept embedded sign-in.
 - ASAR symlinks are rejected. New native dependencies and terminal-module versions need a reviewed compatibility update.
 - The MIT license covers the integration code in this repository. Upstream application and dependency licenses still apply. Their bundled notices are retained during installation.
-
-## Screenshots
-
-Fresh installations on both distributions:
-
-| Fedora 44 | Debian 12 |
-| --- | --- |
-| ![MinimaxDeck on Fedora](docs/screenshots/fedora-sign-in.png) | ![MinimaxDeck on Debian](docs/screenshots/debian-sign-in.png) |
-
-These captures show the real MiniMax sign-in screen in disposable profiles. They contain no account data. See [verification](docs/VERIFICATION.md) for what was tested.
 
 ## Coming soon
 

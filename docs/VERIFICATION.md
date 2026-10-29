@@ -19,7 +19,9 @@ The Fedora and Debian 12 installs used a copy of the official 3.1.7 installer, i
 
 Debian 13 used the default `bash install.sh` path: feed discovery, upstream download and checksum verification, native dependency installation, rebuild, and launcher setup all completed successfully.
 
-The GUI checks used Xvfb with container-only `--no-sandbox --disable-gpu` flags. Those flags are not enabled by the normal installer. Screenshots show actual empty-profile sign-in screens, not signed-in coding sessions.
+The GUI checks used Xvfb with container-only `--no-sandbox --disable-gpu` flags. Those flags are not enabled by the normal installer. The [Fedora](screenshots/fedora-sign-in.png) and [Debian](screenshots/debian-sign-in.png) startup captures show actual empty-profile sign-in screens.
+
+The README's [dashboard preview](screenshots/dashboard.png) was captured separately from the installed application using an existing signed-in session. The account area, personal task history, and survey popup are excluded. This is a workspace preview, not a fresh sign-in or recorded coding test.
 
 ## Automated checks
 
@@ -56,7 +58,7 @@ Shell syntax and JavaScript parsing are checked separately. CI runs portable tes
 
 ## Remaining checks
 
-Live account sign-in, sign-out, account persistence, paid prompts, long coding sessions, third-party browser authorization, screen capture and computer-control tools were not exercised. No user credentials or subscription usage were used.
+Live account sign-in, sign-out, account persistence, paid prompts, long coding sessions, third-party browser authorization, screen capture and computer-control tools were not exercised. Installation tests used empty profiles. The separate dashboard capture submitted no prompts and did not export credentials or profile data.
 
 Full GNOME/Wayland integration and normal desktop sandbox behavior need a real desktop check. A container startup test does not certify those. Update discovery and isolated rollback were tested; activation of a future upstream release and profile compatibility after downgrading remain unverified.
 
