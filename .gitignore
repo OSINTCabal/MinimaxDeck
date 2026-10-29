@@ -1,0 +1,15 @@
+node_modules/
+build/
+app-*/
+rollback-*/
+*.asar
+*.exe
+*.node
+*.zip
+*.tar.gz
+*.log
+.env*
+*.pem
+*.key
+.update.lock
+*.part

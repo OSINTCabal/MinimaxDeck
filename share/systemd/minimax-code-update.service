@@ -1,0 +1,9 @@
+[Unit]
+Description=MiniMax Code per-user updater (rebuilds new official releases for Linux; used on next launch)
+After=network-online.target
+
+[Service]
+Type=oneshot
+Nice=10
+Environment=MINIMAX_CODE_ROOT=%h/.local/opt/minimax-code
+ExecStart=%h/.local/opt/minimax-code/updater/run-update.sh --stage

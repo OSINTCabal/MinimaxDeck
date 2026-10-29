@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=MiniMax Code
+GenericName=AI Agent
+Comment=MiniMax Code desktop AI agent (Linux port of the official Windows app)
+Exec=@BIN@ %U
+TryExec=@BIN@
+Terminal=false
+Type=Application
+Icon=minimax-code
+StartupWMClass=minimax-code
+StartupNotify=true
+Categories=Development;Utility;
+Keywords=MiniMax;Agent;AI;Code;
+Actions=check-updates;
+
+[Desktop Action check-updates]
+Name=Check for Updates
+Exec=@BIN@ --check-updates

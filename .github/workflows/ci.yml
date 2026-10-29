@@ -1,0 +1,20 @@
+name: Checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ['18', '20', '22']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: node --test tests/*.test.cjs
+      - name: Syntax checks
+        run: |
+          for f in install.sh minimax-code.sh uninstall.sh updater/*.sh; do sh -n "$f" || exit; done
+          for f in updater/*.js updater/shim/*.js; do node --check "$f" || exit; done
